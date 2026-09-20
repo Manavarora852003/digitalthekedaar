@@ -42,6 +42,32 @@ footer{background:#081b2d;color:#e6edf3;padding:45px 0 22px}.foot a{color:#f4f7f
 .loginIntro{display:flex;gap:12px;align-items:center;background:linear-gradient(135deg,#f7fafc,#fff7e5);border:1px solid #edf0f4;border-radius:14px;padding:14px;margin:0 0 18px}.loginIntro .miniLogo{width:42px;height:42px;object-fit:contain}.authLabel{font-size:12px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.8px;margin:4px 0 8px}.roleGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}.roleCard{position:relative;border:1.5px solid var(--line);border-radius:14px;padding:14px;text-align:left;background:#fff;cursor:pointer;transition:.2s}.roleCard:hover{border-color:#dca022;transform:translateY(-2px);box-shadow:0 8px 22px rgba(11,34,57,.08)}.roleCard.active{border-color:var(--gold);background:#fff8e8;box-shadow:0 0 0 3px rgba(238,161,34,.12)}.roleCard strong{display:block;color:var(--navy);font-size:14px}.roleCard span{display:block;color:var(--muted);font-size:12px;margin-top:4px}.roleIcon{width:38px;height:38px;border-radius:11px;background:#edf3f8;display:grid;place-items:center;margin-bottom:8px;color:var(--navy);border:1px solid #e3eaf0}.roleIcon svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.roleCard.active .roleIcon{background:var(--gold);color:#fff;border-color:var(--gold)}.authSwitch{display:flex;justify-content:center;gap:5px;margin-top:14px;font-size:13px;color:var(--muted)}.authSwitch button{border:0;background:none;color:var(--gold);font-weight:900;padding:0}.authNote{font-size:12px;color:var(--muted);line-height:1.5;margin-top:4px}.forgot{border:0;background:none;color:var(--gold);font-weight:800;font-size:12px;padding:0;justify-self:end}.authBtn{width:100%;padding:13px}.modalHeadBrand{display:flex;align-items:center;gap:9px}.modalHeadBrand img{width:38px;height:38px;object-fit:contain}.modalHeadBrand h2{margin:0}.
 @media(max-width:600px){.roleGrid{grid-template-columns:1fr 1fr}.box{padding:20px}.foot{grid-template-columns:1fr 1fr;gap:24px}.foot>div:first-child{grid-column:1/-1}.brandText{font-size:18px}.brandLogo{width:40px;height:40px}}
 </style>
+
+<style id="demo-worker-profiles">
+.demo-workers-section{padding:72px 0;background:#f7f9fc}
+.demo-workers-head{text-align:center;max-width:760px;margin:0 auto 34px}
+.demo-workers-head .eyebrow{color:#d99616;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+.demo-workers-head h2{margin:8px 0 10px;color:#09213a;font-size:36px}
+.demo-workers-head p{margin:0;color:#64748b}
+.demo-worker-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.demo-worker-card{background:#fff;border:1px solid #e3e9f0;border-radius:20px;padding:22px;box-shadow:0 10px 28px rgba(8,27,45,.07);transition:.25s;position:relative;overflow:hidden}
+.demo-worker-card:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(8,27,45,.13);border-color:#e3ad35}
+.demo-worker-top{display:flex;gap:15px;align-items:center}
+.demo-avatar{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:#e9eef4;color:#09213a;font-size:22px;font-weight:900;border:3px solid #f0b323}
+.demo-worker-name{font-weight:900;color:#09213a;font-size:18px}
+.demo-verified{font-size:11px;color:#147a52;font-weight:800;margin-top:4px}
+.demo-rating{color:#d99616;font-weight:800;font-size:13px}
+.demo-meta{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.demo-chip{padding:6px 9px;border-radius:999px;background:#f3f6f9;color:#425466;font-size:12px;font-weight:700}
+.demo-rate{display:flex;justify-content:space-between;border-top:1px solid #edf1f5;padding-top:16px;margin-top:6px}
+.demo-rate strong{color:#09213a}
+.demo-hire{margin-top:17px;width:100%;border:0;border-radius:11px;background:#f4ad19;color:#09213a;font-weight:900;padding:12px;cursor:pointer}
+.demo-hire:hover{background:#e29a08}
+.demo-badge{position:absolute;top:17px;right:17px;font-size:10px;font-weight:800;color:#64748b;background:#f4f6f8;padding:5px 8px;border-radius:999px}
+@media(max-width:900px){.demo-worker-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.demo-worker-grid{grid-template-columns:1fr}.demo-workers-head h2{font-size:28px}}
+</style>
+
 </head>
 <body>
 <div id="site">
@@ -87,6 +113,68 @@ footer{background:#081b2d;color:#e6edf3;padding:45px 0 22px}.foot a{color:#f4f7f
 </section>
 
 <section><div class="container"><div class="cta"><div><h2>Kaam Bhi, Bharosa Bhi.</h2><p>Verified profiles, transparent rates and ratings.</p></div><button class="btn primary" onclick="openRegister()">Create Account</button></div></div></section>
+
+<!-- DEMO_WORKERS_START -->
+<section class="demo-workers-section" id="demo-workers">
+  <div class="container">
+    <div class="demo-workers-head">
+      <div class="eyebrow">Sample Profiles</div>
+      <h2>Meet Our Skilled Workers</h2>
+      <p>Explore sample profiles to see how workers will appear on Digital Thekedaar. These are demo profiles for website preview.</p>
+    </div>
+    <div class="demo-worker-grid">
+      <article class="demo-worker-card">
+        <span class="demo-badge">Demo Profile</span>
+        <div class="demo-worker-top"><div class="demo-avatar">RK</div><div><div class="demo-worker-name">Ramesh Kumar</div><div class="demo-verified">✓ Profile Verified (Demo)</div><div class="demo-rating">★ 4.8 · 124 reviews</div></div></div>
+        <div class="demo-meta"><span class="demo-chip">Mason</span><span class="demo-chip">8 years exp.</span><span class="demo-chip">Gurugram</span><span class="demo-chip">Available</span></div>
+        <div class="demo-rate"><span>Daily <strong>₹750</strong></span><span>Hourly <strong>₹100</strong></span></div>
+        <button class="demo-hire" type="button" onclick="document.querySelector('#search')?.scrollIntoView({behavior:'smooth'})">Find Similar Workers</button>
+      </article>
+
+      <article class="demo-worker-card">
+        <span class="demo-badge">Demo Profile</span>
+        <div class="demo-worker-top"><div class="demo-avatar">SY</div><div><div class="demo-worker-name">Suresh Yadav</div><div class="demo-verified">✓ Profile Verified (Demo)</div><div class="demo-rating">★ 4.7 · 91 reviews</div></div></div>
+        <div class="demo-meta"><span class="demo-chip">Painter</span><span class="demo-chip">6 years exp.</span><span class="demo-chip">Gurugram</span><span class="demo-chip">Available</span></div>
+        <div class="demo-rate"><span>Daily <strong>₹800</strong></span><span>Hourly <strong>₹110</strong></span></div>
+        <button class="demo-hire" type="button" onclick="document.querySelector('#search')?.scrollIntoView({behavior:'smooth'})">Find Similar Workers</button>
+      </article>
+
+      <article class="demo-worker-card">
+        <span class="demo-badge">Demo Profile</span>
+        <div class="demo-worker-top"><div class="demo-avatar">AK</div><div><div class="demo-worker-name">Amit Kumar</div><div class="demo-verified">✓ Profile Verified (Demo)</div><div class="demo-rating">★ 4.9 · 76 reviews</div></div></div>
+        <div class="demo-meta"><span class="demo-chip">Electrician</span><span class="demo-chip">5 years exp.</span><span class="demo-chip">Delhi</span><span class="demo-chip">Available</span></div>
+        <div class="demo-rate"><span>Daily <strong>₹900</strong></span><span>Hourly <strong>₹120</strong></span></div>
+        <button class="demo-hire" type="button" onclick="document.querySelector('#search')?.scrollIntoView({behavior:'smooth'})">Find Similar Workers</button>
+      </article>
+
+      <article class="demo-worker-card">
+        <span class="demo-badge">Demo Profile</span>
+        <div class="demo-worker-top"><div class="demo-avatar">RJ</div><div><div class="demo-worker-name">Rajesh</div><div class="demo-verified">✓ Profile Verified (Demo)</div><div class="demo-rating">★ 4.6 · 68 reviews</div></div></div>
+        <div class="demo-meta"><span class="demo-chip">Plumber</span><span class="demo-chip">7 years exp.</span><span class="demo-chip">Gurugram</span><span class="demo-chip">Available</span></div>
+        <div class="demo-rate"><span>Daily <strong>₹850</strong></span><span>Hourly <strong>₹115</strong></span></div>
+        <button class="demo-hire" type="button" onclick="document.querySelector('#search')?.scrollIntoView({behavior:'smooth'})">Find Similar Workers</button>
+      </article>
+
+      <article class="demo-worker-card">
+        <span class="demo-badge">Demo Profile</span>
+        <div class="demo-worker-top"><div class="demo-avatar">MS</div><div><div class="demo-worker-name">Mohan Singh</div><div class="demo-verified">✓ Profile Verified (Demo)</div><div class="demo-rating">★ 4.8 · 83 reviews</div></div></div>
+        <div class="demo-meta"><span class="demo-chip">Carpenter</span><span class="demo-chip">9 years exp.</span><span class="demo-chip">Manesar</span><span class="demo-chip">Available</span></div>
+        <div class="demo-rate"><span>Daily <strong>₹1,000</strong></span><span>Hourly <strong>₹135</strong></span></div>
+        <button class="demo-hire" type="button" onclick="document.querySelector('#search')?.scrollIntoView({behavior:'smooth'})">Find Similar Workers</button>
+      </article>
+
+      <article class="demo-worker-card">
+        <span class="demo-badge">Demo Profile</span>
+        <div class="demo-worker-top"><div class="demo-avatar">DP</div><div><div class="demo-worker-name">Deepak</div><div class="demo-verified">✓ Profile Verified (Demo)</div><div class="demo-rating">★ 4.7 · 52 reviews</div></div></div>
+        <div class="demo-meta"><span class="demo-chip">Welder</span><span class="demo-chip">4 years exp.</span><span class="demo-chip">Gurugram</span><span class="demo-chip">Available</span></div>
+        <div class="demo-rate"><span>Daily <strong>₹950</strong></span><span>Hourly <strong>₹125</strong></span></div>
+        <button class="demo-hire" type="button" onclick="document.querySelector('#search')?.scrollIntoView({behavior:'smooth'})">Find Similar Workers</button>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- DEMO_WORKERS_END -->
+
 <footer><div class="container"><div class="foot"><div><div class="brand" style="color:white"><img class="brandLogo" src="/assets/digital-thekedaar-icon.png" alt="Digital Thekedaar logo"><span class="brandText"><span class="brandDigital">Digital</span> <span class="brandThekedaar">Thekedaar</span></span></div><p>Labour Chowk, Ab Digital.</p></div><div><h4>Platform</h4><a href="#find">Find Workers</a><a href="#categories">Categories</a><a href="#how">How It Works</a><a href="#founder">Founder</a></div><div><h4>For Workers</h4><a href="#" onclick="openWorkerForm();return false">Register</a><a href="#workers">Guidelines</a></div><div><h4>Support</h4><a href="#faqs">FAQs</a><a href="mailto:digitalthekedaar4@gmail.com">digitalthekedaar4@gmail.com</a><a href="#faqs">Terms & Privacy</a></div></div><div class="copy">© 2026 Digital Thekedaar</div></div></footer>
 </div>
 
